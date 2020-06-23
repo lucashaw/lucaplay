@@ -5,16 +5,28 @@ var COUNTDOWN;
 let MOUSE;
 let PIXELBOLD;
 let CURLYNEUE;
+let CURLYPIXEL;
+let NEUEFONT;
 let EYES1;
 let EYES2;
 let EYES3;
-
+var scrollerx = 0;
+var scrollera = 445;
+var scrollerb = 560;
+var scrollery = 670;
+var scrollery2 = 655;
+var scrollerx2 = 700;
+var scrollerc = 1145;
+var scrollerd = 1260;
+var speed = 2
 
 function preload() {
   LOGO=loadImage('Art School Degree Show Logo@300x.png');
   MOUSE=loadImage('No Hands Cursor@300x.png');
   PIXELBOLD = loadFont('NeueBit-Bold.otf');
   CURLYNEUE = loadFont('EditorialNew-Light.otf');
+  CURLYPIXEL= loadFont('Mondwest-Regular.otf');
+  NEUEFONT = loadFont('NeueMontreal-Regular.otf');
 
   
 }
@@ -26,30 +38,30 @@ function setup() {
 }
 
 function draw() {
-  clear();
+  background(240);
   
-  if (mouseIsPressed) {
+  //if (mouseIsPressed) {
   //image(EYES2,0,0,1300,700);
-  rect(60,70,900,500);
-  }
+  //rect(60,70,900,500);
+  
   
   textAlign(LEFT);
   textFont(CURLYNEUE);
   textSize(50);
   fill(0);
-  text('Launching',270,350);
+  text('Launching',280,350);
   textFont(PIXELBOLD);
   textSize(100);
   fill(100,600,100);
-  text('26.06.20',500,350);
+  text('26.06.20',510,350);
   textFont(CURLYNEUE);
   textSize(50);
   fill(0);
-  text('@',775,340);
+  text('@',785,350);
   textFont(PIXELBOLD);
   textSize(100);
   fill(100,600,100);
-  text('1800',835,350);
+  text('1800',845,350);
   
   
   
@@ -89,15 +101,54 @@ function draw() {
     
   
  // HTMLImageElement(COUNTDOWN);
- 
+ //bottom scroller text
+  noStroke();
+  textFont(CURLYPIXEL);
+  textSize(20);
+  fill(0);
+  textAlign(LEFT);
+  text('Stockport Art School present their annual degree show',scrollerx,scrollery);
+  textFont(NEUEFONT);
+  text('this time, it is',scrollera,scrollery);
+  textFont(CURLYPIXEL);
+  fill(100,600,100);
+  text('For Eyes Only.',scrollerb,scrollery2,590,670);
+  scrollerx = scrollerx +speed
+  scrollera = scrollera +speed
+  scrollerb = scrollerb +speed  
+  
+   noStroke();
+  textFont(CURLYPIXEL);
+  textSize(20);
+  fill(0);
+  textAlign(LEFT);
+  text('Stockport Art School present their annual degree show',scrollerx2,scrollery);
+  textFont(NEUEFONT);
+  text('this time, it is',scrollerc,scrollery);
+  textFont(CURLYPIXEL);
+  fill(100,600,100);
+  text('For Eyes Only.',scrollerd,scrollery2,590,670);
+  scrollerx2=scrollerx2+speed
+  scrollerc=scrollerc+speed
+  scrollerd=scrollerd+speed
+  
+  
+  if (scrollerb > 1200) {
+    speed = -2
+  }
+  if (scrollerx <-500) {
+    speed = 2
+  
+  }
   
    push();
-  translate(100,100);
+  translate(150,150);
   rotate(angle);
   imageMode(CENTER);
-  image(LOGO,0,0,150,150);
+  image(LOGO,0,0,200,200);
   angle=angle +0.5 
   pop();
+
 
     
 }
