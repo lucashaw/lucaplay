@@ -32,7 +32,7 @@ function preload() {
 }
 
 function setup() {
-  canvas = createCanvas(1300, 700);
+  canvas = createCanvas(windowWidth, windowHeight);
   canvas.position(0,0);
   angleMode(DEGREES);
 }
@@ -136,7 +136,7 @@ function draw() {
   if (scrollerb > 1200) {
     speed = -2
   }
-  if (scrollerx <-500) {
+  if (scrollerx <-700) {
     speed = 2
   
   }
