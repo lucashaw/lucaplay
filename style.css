@@ -3,8 +3,8 @@ html, body {
   padding: 0;
 }
 canvas {
-  display: blochtml, body;
   height: 100%;
+  width: 100%
 }
 
 body {
