@@ -32,8 +32,10 @@ function preload() {
 }
 
 function setup() {
-  canvas = createCanvas(windowWidth, windowHeight);
-  canvas.position(0,0);
+ // canvas = createCanvas(windowWidth, windowHeight);
+  //canvas.position(0,0);
+  var cnv = createCanvas(windowWidth, windowHeight);
+  cnv.style('display', 'block');
   angleMode(DEGREES);
 }
 
@@ -44,7 +46,11 @@ function draw() {
   //image(EYES2,0,0,1300,700);
   //rect(60,70,900,500);
   
-  
+  function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+}
+
+ 
   textAlign(LEFT);
   textFont(CURLYNEUE);
   textSize(50);
