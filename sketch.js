@@ -102,7 +102,7 @@ JAMIEPIC=loadImage('JamieRussell.png');
 LOTTEPIC=loadImage('LotteHow.png');
 VICRPIC=loadImage('VictoriaRoberts.png');
 VICBPIC=loadImage('VictoriaBradburn.png');
-EMELYPIC=loadImage('Screen Shot 2020-06-26 at 18.07.43.png');
+EMELYPIC=loadImage('Em png.png');
 EYES0=loadImage('Eyes transparent@300x.png');
 DEGREESHOW=loadImage('bevelled degree show.png');
 STOCKYLOGO=loadImage('stockport_college_logo-png.png');
@@ -114,8 +114,9 @@ function setup() {
    angleMode(DEGREES);
    noCursor();
    //EMELYPIC=createVideo(['ems-page 1 c.mp4']);
+    //EMELYPIC.hide();
    //EMELYPIC.loop();
-   //EMELYPIC.hide();
+  
 }
   function keyPressed() {
   if (keyCode === LEFT_ARROW) {
