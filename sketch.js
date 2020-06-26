@@ -102,6 +102,7 @@ JAMIEPIC=loadImage('JamieRussell.png');
 LOTTEPIC=loadImage('LotteHow.png');
 VICRPIC=loadImage('VictoriaRoberts.png');
 VICBPIC=loadImage('VictoriaBradburn.png');
+EMELYPIC=loadImage('Screen Shot 2020-06-26 at 18.07.43.png');
 EYES0=loadImage('Eyes transparent@300x.png');
 DEGREESHOW=loadImage('bevelled degree show.png');
 STOCKYLOGO=loadImage('stockport_college_logo-png.png');
@@ -112,9 +113,9 @@ function setup() {
    canvas = createCanvas(displayWidth, displayHeight);
    angleMode(DEGREES);
    noCursor();
-   EMELYPIC=createVideo(['ems-page 1 c.mp4']);
-   EMELYPIC.loop();
-   EMELYPIC.hide();
+   //EMELYPIC=createVideo(['ems-page 1 c.mp4']);
+   //EMELYPIC.loop();
+   //EMELYPIC.hide();
 }
   function keyPressed() {
   if (keyCode === LEFT_ARROW) {
@@ -367,7 +368,7 @@ function draw() {
 //EMELY
    if (mouseX>880 && mouseX<980 && mouseY>620 && mouseY<720) {
     image(EMELYPIC,150,50,1000,700);
-     fill(0);
+    fill(0);
     rect(150,50,1000,50);
     textFont(CURLYPIXEL);
     textSize(80);
